@@ -2,7 +2,7 @@
 
 Official website for ClarifyThis - a native macOS productivity app that provides instant, context-aware AI explanations.
 
-🌐 **[Visit Live Website](https://your-domain.com)** <!-- Replace with your actual domain -->
+🌐 **[Visit Live Website]([https://clarifythisnow.netlify.app])** <!-- Replace with your actual domain -->
 
 ## About
 

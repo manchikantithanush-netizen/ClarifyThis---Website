@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - ClarifyThis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#000000',
+                gray: '#1d1d1f',
+                light: '#f5f5f7',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-up': 'slideUp 0.5s ease-out forwards',
+              'check-mark': 'checkMark 0.8s ease-in-out forwards',
+              'bounce-in': 'bounceIn 1s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              checkMark: {
+                '0%': { strokeDashoffset: '100' },
+                '100%': { strokeDashoffset: '0' },
+              },
+              bounceIn: {
+                '0%': { opacity: '0', transform: 'scale(0.3)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+                '70%': { transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white text-black antialiased selection:bg-black selection:text-white min-h-screen flex items-center justify-center" style="cursor: auto;">
+    <div class="text-center animate-fade-in">
+      <!-- Animated Check Mark -->
+      <div class="mb-8 animate-bounce-in" style="will-change: transform;">
+        <svg class="w-24 h-24 mx-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#10b981" stroke-width="2" fill="none"/>
+          <path d="M7.5 12l2.5 2.5 6-6" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                stroke-dasharray="100" stroke-dashoffset="100" class="animate-check-mark"/>
+        </svg>
+      </div>
+
+      <!-- Thank You Text -->
+      <h1 class="text-4xl font-bold text-brand-black mb-4 animate-slide-up" style="will-change: transform;">Thank You!</h1>
+      <p class="text-xl text-brand-gray mb-6 animate-slide-up" style="animation-delay: 0.2s; will-change: transform;">Your donation has been successfully processed.</p>
+      <p class="text-lg text-brand-gray mb-8 animate-slide-up" style="animation-delay: 0.4s; will-change: transform;">We truly appreciate your support in helping us bring clarity to the world.</p>
+
+      <!-- Additional Message -->
+      <div class="bg-brand-light rounded-lg p-6 max-w-md mx-auto animate-slide-up" style="animation-delay: 0.6s; will-change: transform;">
+        <p class="text-brand-gray">Your contribution helps us maintain and improve ClarifyThis, ensuring everyone has access to instant clarity.</p>
+      </div>
+
+      <!-- Back to Home Button -->
+      <div class="mt-8 animate-slide-up" style="animation-delay: 0.8s; will-change: transform;">
+        <a href="/" class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-brand-gray transition-colors duration-200">
+          Back to ClarifyThis
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
